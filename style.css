@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
 * {
+    font-family: "Montserrat", sans-serif;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -8,9 +9,26 @@
 }
 
 
+.background{
+    background-image: url("../background.avif");
+    background-size: cover;
+
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
+.register{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 60px;
+}
 
 li, a, button {
-    font-family: "Montserrat", sans-serif;
+
     font-weight: 500;
     font-size: 16px;
     color: #black;
@@ -48,6 +66,51 @@ nav__links {
     color: #0088a9
 }
 
+.wrapper{
+    display: grid;
+    padding-left: 250px;
+    place-items:center;
+    position: absolute;
+    width: 80vw;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    display: flex;
+    gap: 1px;
+    background:white;
+    background-size: cover;
+}
+
+.container{
+    width: 28vmin;
+    height: 28vmin;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-around;
+    padding: 1em 0;
+    position: relative;
+    font-size:16px;
+    border-radius: 0.5em;
+    border-bottom: 3px solid #0088a9;
+}
+
+span.num{
+    color: black;
+    display: grid;
+    place-items: center;
+    font-weight: 600;
+    font-size: 3em;
+}
+
+span.text {
+    color: black
+    font-size: 1em;
+    text-align: center;
+    pad: 0.7em 0;
+    font-weight: 400;
+    line-height: 0;
+}
+
 button {
     padding: 9px 25px;
     background-color: rgba(0,136,169,1);
@@ -59,4 +122,39 @@ button {
 
 button:hover {
     background-color: rgba(0,136,169,0.8);
+}
+
+@media screen and (max-width: 1024px) {
+    .wrapper {
+        width: 85vw;
+    }
+    .container {
+        height: 26vmin;
+        width: 26vmin;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        width: 90vw;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    .container{
+        width: calc(50% - 40px);
+        height: 30vmin;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .wrapper {
+        gap: 15px;
+    }
+    .container{
+        width: 100%;
+        height: 25vmin;
+        font-size: 8px;
+    }
 }
