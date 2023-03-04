@@ -5,14 +5,94 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+.regButton{
+    font-size:20px;
+    border:1px #ffffff;
+    margin-left:100px;
+    width:250px;
+    border-radius:4px;
+    border: 1px solid white;
+    background-color:#e89600;
+}
+
+.top__header{
     background-color: white;
 }
 
+body{
+    background-image: url("image/pattern.jpg");
+    background-color: #ffffff;
+}
+
+.textBorder{
+    border-left-width: thick;
+}
+
+.left{
+    margin-top:100px;
+    margin-left:100px;
+    padding-top:200px;
+    float:left;
+}
+
+.slider{
+    margin-top:50px;
+    float:right;
+    padding-top:200px;
+    position: relative;
+    width: 60%;
+    overflow:hidden;
+}
+
+.images{
+    display: flex;
+    width: 100%;
+}
+
+.images img{
+    height: 400px;
+    width: 100%;
+    transition: all 0.15s ease;
+}
+
+.images input {
+    display: none;
+}
+
+.dots{
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+
+.dots label{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: solid #000 3px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    margin: 5px;
+}
+
+.dots label:hover {background: #000;}
+#img1:checked ~ .m1 {
+    margin-left: 0;
+}
+#img2:checked ~ .m2 {
+    margin-left: -100%;
+}
+#img3:checked ~ .m3 {
+    margin-left: -200%;
+}
+
+
 
 .background{
-    background-image: url("../background.avif");
+    background-image: url("image/background.jpg");
     background-size: cover;
-
     padding-top: 200px;
     padding-bottom: 200px;
 }
@@ -21,14 +101,25 @@
     display: grid;
     justify-content: center;
     align-items: center;
+    
 }
 
 h1 {
     font-size: 60px;
+    color:white;
+    text-shadow: 10px 10px 20px #373737;
+}
+
+h4 {
+    text-shadow: 10px 10px 20px #373737;
+    font-size: 18px;
+    padding-top:20px;
+    padding-left: 60px;
+    padding-bottom:30px;
+    color:white;
 }
 
 li, a, button {
-
     font-weight: 500;
     font-size: 16px;
     color: #black;
@@ -68,17 +159,22 @@ nav__links {
 
 .wrapper{
     display: grid;
-    padding-left: 250px;
     place-items:center;
     position: absolute;
-    width: 80vw;
+    border-radius: 15px;
+    height: 11vw;
+    width: 55vw;
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
     display: flex;
     gap: 1px;
     background:white;
+    margin-top:250px;
     background-size: cover;
+    border-bottom: 4px solid #0088a9;
+
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .container{
@@ -91,7 +187,6 @@ nav__links {
     position: relative;
     font-size:16px;
     border-radius: 0.5em;
-    border-bottom: 3px solid #0088a9;
 }
 
 span.num{
