@@ -6,6 +6,73 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="~/lib/Font-Awesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="~/lib/Font-Awesome/css/regular.min.css">
+    <link rel="stylesheet" href="~/lib/Font-Awesome/css/solid.min.css">
+    <script src="https://kit.fontawesome.com/acd9665247.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Verdana, sans-serif;
+        }
+
+
+        .mySlides {
+            display: none;
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            float: right;
+            margin-top: 19em;
+            margin-right: 15em;
+            max-width: 350px;
+            margin-bottom: 100px;
+        }
+
+        /* Caption text */
+        .texts {
+            color: black;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+
+
+        /* Fading animation */
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+            .text {
+                font-size: 11px
+            }
+        }
+    </style>
     <title>Home</title>
 </head>
 
@@ -19,12 +86,12 @@
                     <ul class="nav__links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
-                        <li><a href="learning.html">Learning Areas</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="https://uoa-academy.com/learning-areas/">Learning Areas</a></li>
+                        <li><a href="https://uoa-academy.com/gallery/">Gallery</a></li>
                         <li><a href="news.html">News</a></li>
                     </ul>
                 </nav>
-                <a class="cta" href="#"><button class="headerBtn">Contact</button></a>
+                <a class="cta" href="contact.html"><button class="headerBtn">Contact</button></a>
             </header>
         </div>
     </section>
@@ -70,31 +137,186 @@
             <div class="left">
                 <h2>What People Say About Us</h2>
                 <div class="textBorder">
-                    <h1>Client </h1>
-                    <h1>Testimonials</h1>
+                    <h1>Client<br>Testimonials</h1>
                 </div>
             </div>
 
-            <div class="slider">
-                <div class="images">
-                    <input type="radio" name="slide" id="img1" checked>
-                    <input type="radio" name="slide" id="img2">
-                    <input type="radio" name="slide" id="img3">
+            <div class="slideshow-container">
 
-                    <img src="image/1.jpg" class="m1" alt="img1">
-                    <img src="image/2.jpg" class="m2" alt="img2">
-                    <img src="image/3.jpg" class="m3" alt="img3">
+                <div class="mySlides fade">
+                    <img src="image/1.jpg" style="width:100%">
+                    <div class="quote-text">"Quote, name and location section"</div>
                 </div>
-                <div class="dots">
-                    <label for="img1"></label>
-                    <label for="img2"></label>
-                    <label for="img3"></label>
+
+                <div class="mySlides fade">
+                    <img src="image/2.jpg" style="width:100%">
+                    <div class="quote-text">"Quote, name and location section"</div>
                 </div>
+
+                <div class="mySlides fade">
+                    <img src="image/3.jpg" style="width:100%">
+                    <div class="quote-text">"Quote, name and location section"</div>
+                </div>
+
+            </div>
+            <br>
+
+            <div style="text-align:center">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
             </div>
         </div>
     </section>
+    
+
+    <div class="home-background">
+        <div class="home-title">What People Say About Us</div>
+        <div class="home-title-2">Explore What We Are Doing Better</div>
+        <!-- image card layout start -->
+        <div class="new-container">
+            <!-- image row start -->
+            <div class="row">
+                <!-- image card start -->
+                <div class="image">
+                    <img src="image/home1.jpg" alt="new1">
+                    <div class="details">
+                        <h4>MANAGEMENT & LEADERSHIP</h4>
+                        <p>Maximizing your Leadership Potential</p>
+                        <div class="more">
+                            <a href="#" class="read-more">Read <span>More</span></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Image card end -->
+                <!-- image card start -->
+                <div class="image">
+                    <img src="image/home2.jpg" alt="new1">
+                    <div class="details">
+                        <h4>CLIENT RELATIONS</h4>
+                        <p>Customer-Centric Organization through Excellent individuals</p>
+                        <div class="more">
+                            <a href="#" class="read-more">Read <span>More</span></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Image card end -->
+                <!-- image card start -->
+                <div class="image">
+                    <img src="image/home3.jpg" alt="new1">
+                    <div class="details">
+                        <h4>HUMAN CAPITAL MANAGEMENT</h4>
+                        <p>Maximizing Human Capital Management</p>
+                        <div class="more">
+                            <a href="#" class="read-more">Read <span>More</span></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Image card end --><!-- image card start -->
+                <div class="image">
+                    <img src="image/home4.jpg" alt="new1">
+                    <div class="details">
+                        <h4>DIGITAL TRANSFORMATION & INNOVATION</h4>
+                        <p>Embrace or Miss Out</p>
+                        <div class="more">
+                            <a href="#" class="read-more">Read <span>More</span></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Image card end -->
+                
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+        <!-- Footer Section -->
+    <div>
+        <div class="footer">
+            <div class="col-1">
+                <img class="logo2" src="image/logo2.png" alt="logo2">
+                <p align="justify">Corporate training arm of UOA Group,<br>playing a leading role in meeting the
+                    ever-<br>changing needs of business organizations. </p>
+            </div>
+            <div class="col-2">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="learning.html">Learning Areas</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="news.html">News</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="col-3">
+                <h3>Contact Us</h3>
+                <span>
+
+                </span>
+                <p align="justify">UOA ACADEMY SDN BHD (1165343-D) UOA Corporate <br>Tower, Lobby A, Avenue 10, The
+                    Vertical Bangsar South <br>City, No 8 Jalan Kerinchi 59200 Kuala Lumpur Malaysia.</p>
+                <br>
+                <span>
+                    <i class="fa-regular fa-envelope"></i>
+                    inquiry@uoa-academy.com
+                </span>
+                <br>
+                <span>
+                    <i class="fa-solid fa-phone"></i>
+                    +603-2245 9188
+                </span>
+                <br>
+                <span>
+                    <i class="fas fa-building"></i>
+                    +603-2241 2862
+                </span>
+                <br>
+                <div class="social-icons">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
 
     <script src="index.js"></script>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 4000); // Change image every 2 seconds
+        }
+    </script>
 </body>
 
 </html>
